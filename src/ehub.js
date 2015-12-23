@@ -24,6 +24,7 @@ Ehub.prototype.addEmitter = function(emitter){
 	    }
 	}
     };
+    console.log("emitter:", emitter)
     emitter.once("close", finalizer.bind(this));
     this.emitters.push(emitter);
     return this.emitters.length;
