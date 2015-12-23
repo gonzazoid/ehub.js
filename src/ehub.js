@@ -2,11 +2,11 @@
 const util = require('util');
 const EventEmitter = require('events');
 
-function Ehub(){
+var Ehub = function(){
     this.emitters = [];
     this.cursor = 0;
     EventEmitter.call(this);
-}
+};
 
 Ehub.prototype.addEmitter = function(emitter){
     //подпишемся на удаление эмиттера
