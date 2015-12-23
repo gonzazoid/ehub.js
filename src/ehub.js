@@ -32,6 +32,7 @@ Ehub.prototype.addEmitter = function(emitter){
 Ehub.prototype.pop = function(reciever){
     if(!this.emitters.length) return;
     if(!(this.cursor in this.emitters)) this.cursor = 0;
+    console.log("ehub emitters: ", this.emitters);
     this.emitters[this.cursor].pop(reciever);
     this.cursor++;
     if(this.cursor >= this.emitters.length) this.cursor = 0;
