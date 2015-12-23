@@ -1,7 +1,13 @@
+'use strict';
+const util = require('util');
+const EventEmitter = require('events');
+
 function Ehub(){
     this.emitters = [];
     this.cursor = 0;
+    EventEmitter.call(this);
 }
+util.inherits(Ehub, EventEmitter);
 
 Ehub.prototype.addEmitter = function(emitter){
     //подпишемся на удаление эмиттера
