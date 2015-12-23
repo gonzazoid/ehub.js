@@ -7,7 +7,6 @@ function Ehub(){
     this.cursor = 0;
     EventEmitter.call(this);
 }
-util.inherits(Ehub, EventEmitter);
 
 Ehub.prototype.addEmitter = function(emitter){
     //подпишемся на удаление эмиттера
@@ -38,4 +37,5 @@ Ehub.prototype.pop = function(reciever){
     if(this.cursor >= this.emitters.length) this.cursor = 0;
 };
 
+util.inherits(Ehub, EventEmitter);
 module.exports = Ehub;
