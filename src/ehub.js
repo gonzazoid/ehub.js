@@ -25,7 +25,7 @@ Ehub.prototype.finalizer = function(emitter){
 Ehub.prototype.addEmitter = function(emitter){
     if(emitter instanceof Array){
     	this.emitters.push(emitter);
-    	return emitters.length;
+    	return this.emitters.length;
     }
     //console.log("emitter:", emitter);
     emitter.once("close", this.finalizer.bind(this));
